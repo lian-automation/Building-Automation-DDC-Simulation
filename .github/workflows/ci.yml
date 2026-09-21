@@ -38,3 +38,8 @@ jobs:
 
       - name: Full-day simulation (standard scenario, seed=2024, assert exit 0)
         run: python run_day.py
+
+      - name: Smoke test (assert reproducible day-run baseline)
+        run: |
+          pip install pytest
+          python -m pytest tests -q
