@@ -22,7 +22,6 @@ points/modbus_client_test.py —— Modbus/TCP 主站自测脚本
 【运行】python -m points.modbus_client_test
 """
 
-import math
 import os
 import socket
 import sys

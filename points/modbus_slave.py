@@ -44,7 +44,7 @@ except ImportError:  # pragma: no cover - 仅在未安装 pymodbus 时触发
 
 from points.point_bus import PointBus
 from points.point_defs import (POINT_AI, POINT_AO, POINT_DI, POINT_DO,
-                               REG_SENSOR_FAULT, eng_to_reg, print_point_table)
+                               eng_to_reg, print_point_table)
 
 
 class _BusInputBlock(ModbusSequentialDataBlock):
