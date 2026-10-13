@@ -7,4 +7,6 @@
 
 numpy>=1.26,<3.0        # 数值统计：全天舒适性指标向量化计算(满足率/最大偏差/平均温度)
 flask>=3.0,<4.0         # Web 监控看板后端（HTTP + JSON API）
-pymodbus>=3.6.9,<4.0    # Modbus/TCP 从站(模拟 DDC 控制器)与主站自测客户端
+# 上界必须 <3.7：pymodbus 3.7+ 移除了 ModbusSlaveContext，本仓从站按 3.6.x
+# 实测口径开发（3.16 实测确已不可用）。写 <4.0 会把不兼容版本装进来。
+pymodbus>=3.6.9,<3.7    # Modbus/TCP 从站(模拟 DDC 控制器)与主站自测客户端
